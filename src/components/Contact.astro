@@ -1,0 +1,59 @@
+---
+---
+
+<section class="py-24 bg-white" id="contact">
+    <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20">
+        <div>
+            <h2 class="font-headline text-4xl font-extrabold mb-6">Zajistěte si termín kontroly</h2>
+            <p class="text-lg text-on-surface-variant mb-12 leading-relaxed">Splňte povinnost včas a začněte šetřit na provozních nákladech. Ozveme se vám do 24 hodin s konkrétním návrhem termínu a kalkulací.</p>
+            <div class="space-y-8">
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 flex-shrink-0 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">phone_in_talk</span>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-500 font-bold uppercase tracking-wider">Telefon</p>
+                        <p class="text-xl font-bold">+420 800 123 456</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-12 h-12 flex-shrink-0 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-500 font-bold uppercase tracking-wider">Email</p>
+                        <p class="text-xl font-bold">info@precision-ecology.cz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="bg-surface-container-low p-10 rounded-3xl space-y-6 shadow-sm border border-emerald-50">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2">
+                    <label class="block text-sm font-bold mb-2" for="object-type">Typ objektu</label>
+                    <select id="object-type" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all">
+                        <option>Bytový dům / SVJ</option>
+                        <option>Administrativní budova</option>
+                        <option>Průmyslový areál</option>
+                        <option>Veřejná budova</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2" for="power">Příkon (kW)</label>
+                    <input id="power" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="např. 150" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2" for="location">Lokalita</label>
+                    <input id="location" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Město" type="text"/>
+                </div>
+                <div class="col-span-2">
+                    <label class="block text-sm font-bold mb-2" for="contact-info">Jméno a kontakt</label>
+                    <input id="contact-info" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Jan Novák, 777..." type="text"/>
+                </div>
+            </div>
+            <button class="w-full primary-gradient text-white font-bold py-4 rounded-xl hover:scale-[1.02] transition-transform text-lg shadow-lg" type="submit">
+                Odeslat poptávku kontroly
+            </button>
+        </form>
+    </div>
+</section>

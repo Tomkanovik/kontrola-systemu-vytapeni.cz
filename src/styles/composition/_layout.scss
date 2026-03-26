@@ -1,0 +1,16 @@
+// Composition layers (Layout & Flow)
+.l-container {
+    max-width: 80rem; // 1280px
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+.l-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & > * + * {
+        margin-top: var(--stack-space, 1.5rem);
+    }
+}
