@@ -1,0 +1,90 @@
+---
+const articles = [
+  {
+    title: "Kolik stojí kontrola systému vytápění?",
+    description: "Kompletní přehled cen a faktorů, které ovlivňují finální náklady na zákonnou kontrolu vytápění v roce 2024.",
+    link: "#pricing",
+    icon: "payments"
+  },
+  {
+    title: "Vyhláška 38/2022 Sb.: Vše, co potřebujete vědět",
+    description: "Srozumitelné vysvětlení nové legislativy, která mění pravidla pro kontroly systémů vytápění a klimatizací.",
+    link: "#legislation",
+    icon: "gavel"
+  },
+  {
+    title: "Pokuty za neprovedení kontroly: Hrozí až 200 000 Kč",
+    description: "SEI zpřísňuje kontroly. Zjistěte, jaké sankce hrozí vlastníkům budov a SVJ při nedodržení termínů.",
+    link: "#legislation",
+    icon: "warning"
+  },
+  {
+    title: "Průvodce: Jak probíhá kontrola systému vytápění v praxi",
+    description: "Od přípravy dokumentace až po předání závěrečné zprávy. Podívejte se na krok za krokem.",
+    link: "#process",
+    icon: "engineering"
+  },
+  {
+    title: "Jak snížit náklady na vytápění o 20 %?",
+    description: "Tipy a doporučení z naší praxe, které vám pomohou optimalizovat provoz a ušetřit na energiích.",
+    link: "#features",
+    icon: "energy_savings_leaf"
+  }
+];
+---
+
+<section id="blog" class="py-24 bg-surface-container-low relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+        <div class="text-center mb-16 space-y-4">
+            <h2 class="text-4xl md:text-5xl font-black font-headline text-on-surface tracking-tight">
+                Aktuality a odborné články
+            </h2>
+            <p class="text-xl text-on-surface-variant max-w-2xl mx-auto">
+                Pravidelně pro vás připravujeme informace ze světa energetiky a legislativy.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {articles.map((article) => (
+                <div class="bg-surface p-8 rounded-3xl border border-outline-variant hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-2xl">{article.icon}</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-on-surface leading-tight">
+                        {article.title}
+                    </h3>
+                    <p class="text-on-surface-variant mb-6 leading-relaxed">
+                        {article.description}
+                    </p>
+                    <a href={article.link} class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                        Přečíst článek <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            ))}
+        </div>
+
+        <div class="mt-20 p-12 bg-primary rounded-[3rem] text-white relative overflow-hidden group">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10 group-hover:scale-105 transition-transform duration-700"></div>
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-4 max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-black font-headline tracking-tight">Potřebujete kontrolu v konkrétním městě?</h2>
+                    <p class="text-xl text-white/90">
+                        Působíme po celé České republice. Realizujeme kontroly zejména v těchto lokalitách:
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        {["Brno", "Praha", "Ostrava", "Plzeň", "Liberec", "Olomouc", "České Budějovice", "Hradec Králové"].map(city => (
+                            <span class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-sm font-bold border border-white/10">
+                                {city}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <a href="#contact" class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl block text-center">
+                        Poptat v mém regionu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
