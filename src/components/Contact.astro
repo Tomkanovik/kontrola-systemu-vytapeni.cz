@@ -37,32 +37,44 @@
             </div>
         </div>
         <form class="bg-surface-container-low p-10 rounded-3xl space-y-6 shadow-sm border border-emerald-50">
+            <h3 class="text-2xl font-bold mb-4">Nezávazná poptávka</h3>
             <div class="grid grid-cols-2 gap-4">
                 <div class="col-span-2">
-                    <label class="block text-sm font-bold mb-2" for="object-type">Typ objektu</label>
-                    <select id="object-type" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all">
+                    <label class="block text-sm font-bold mb-2" for="object-type">Typ objektu *</label>
+                    <select id="object-type" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" required>
+                        <option value="">Vyberte typ objektu</option>
                         <option>Bytový dům / SVJ</option>
                         <option>Administrativní budova</option>
                         <option>Průmyslový areál</option>
                         <option>Veřejná budova</option>
+                        <option>Jiný</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-bold mb-2" for="power">Příkon (kW)</label>
-                    <input id="power" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="např. 150" type="text"/>
+                    <label class="block text-sm font-bold mb-2" for="power">Příkon (kW) *</label>
+                    <input id="power" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="např. 150" type="number" min="70" required/>
                 </div>
                 <div>
-                    <label class="block text-sm font-bold mb-2" for="location">Lokalita</label>
-                    <input id="location" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Město" type="text"/>
+                    <label class="block text-sm font-bold mb-2" for="location">Lokalita *</label>
+                    <input id="location" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Město" type="text" required/>
                 </div>
                 <div class="col-span-2">
-                    <label class="block text-sm font-bold mb-2" for="contact-info">Jméno a kontakt</label>
-                    <input id="contact-info" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Jan Novák, 777..." type="text"/>
+                    <label class="block text-sm font-bold mb-2" for="name">Jméno a příjmení *</label>
+                    <input id="name" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Jan Novák" type="text" required/>
+                </div>
+                <div class="col-span-2">
+                    <label class="block text-sm font-bold mb-2" for="email">E-mail *</label>
+                    <input id="email" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="vas@email.cz" type="email" required/>
+                </div>
+                <div class="col-span-2">
+                    <label class="block text-sm font-bold mb-2" for="phone">Telefon</label>
+                    <input id="phone" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="+420..." type="tel"/>
                 </div>
             </div>
             <button class="w-full primary-gradient text-white font-bold py-4 rounded-xl hover:scale-[1.02] transition-transform text-lg shadow-lg" type="submit">
                 Odeslat poptávku kontroly
             </button>
+            <p class="text-xs text-on-surface-variant text-center">Odesláním formuláře souhlasíte se zpracováním osobních údajů.</p>
         </form>
     </div>
 </section>

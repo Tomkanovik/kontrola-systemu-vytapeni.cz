@@ -12,9 +12,69 @@ import Stats from '../components/Stats.astro';
 import Pricing from '../components/Pricing.astro';
 import FAQ from '../components/FAQ.astro';
 import Footer from '../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Kontrola systému vytápění - Ing. Petr Novák",
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1920",
+      "@id": "https://kontrola-systemu-vytapeni.cz",
+      "url": "https://kontrola-systemu-vytapeni.cz",
+      "telephone": "+420722605230",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Weighartova 362/9",
+        "addressLocality": "Brno",
+        "postalCode": "621 00",
+        "addressCountry": "CZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 49.255,
+        "longitude": 16.591
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Brno"
+        },
+        {
+          "@type": "City",
+          "name": "Praha"
+        },
+        {
+          "@type": "City",
+          "name": "Ostrava"
+        },
+        {
+          "@type": "Country",
+          "name": "Česká republika"
+        }
+      ],
+      "description": "Zákonná kontrola systému vytápění dle vyhlášky 38/2022 Sb. pro bytové domy, firmy a veřejné budovy po celé ČR."
+    }
+  ]
+};
+
+const metaTitle = "Kontrola systému vytápění dle vyhlášky 38/2022 Sb. | Celá ČR";
+const metaDescription = "Zákonná kontrola vytápění pro SVJ, firmy a veřejné budovy. Vyhněte se pokutě 200 000 Kč a ušetřete až 20 % nákladů na energie. Brno, Praha, Ostrava i celá ČR.";
 ---
 
-<Layout title="Kontrola Systému Vytápění">
+<Layout title={metaTitle} description={metaDescription} structuredData={structuredData}>
     <Navigation />
     <main>
         <Hero />
