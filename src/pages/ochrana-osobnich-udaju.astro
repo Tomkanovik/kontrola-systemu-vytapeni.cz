@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Ochrana osobních údajů | Kontrola Systému Vytápění">
+    <Navigation />
+    <main class="pt-32 pb-24">
+        <div class="max-w-4xl mx-auto px-8">
+            <h1 class="font-headline text-4xl font-extrabold mb-8 text-on-surface">Zásady ochrany osobních údajů (GDPR)</h1>
+            <div class="prose prose-lg max-w-none text-on-surface-variant space-y-8 leading-relaxed">
+                <section>
+                    <h2 class="text-2xl font-bold text-on-surface mb-4">1. Správce osobních údajů</h2>
+                    <p>
+                        Správcem Vašich osobních údajů je <strong>Ing. Petr Novák</strong>, se sídlem/bydlištěm, IČO: [DOPLNIT IČO], podnikající pod obchodním názvem Kontrola Systému Vytápění (dále jen "správce").
+                    </p>
+                    <p>
+                        Kontaktní údaje správce:<br>
+                        Email: info@kontrola-systemu-vytapeni.cz<br>
+                        Telefon: +420 722 605 230
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-on-surface mb-4">2. Jaké údaje zpracováváme</h2>
+                    <p>
+                        Zpracováváme osobní údaje, které nám sami poskytnete v rámci poptávky nebo smluvního vztahu. Jde především o:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Jméno a příjmení</li>
+                        <li>Kontaktní údaje (email, telefonní číslo)</li>
+                        <li>Informace o objektu (adresa, technické parametry vytápěcího systému)</li>
+                        <li>Fakturační údaje (pokud dojde k uzavření smlouvy)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-on-surface mb-4">3. Účel a právní základ zpracování</h2>
+                    <p>Vaše údaje zpracováváme na základě těchto právních titulů:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Plnění smlouvy nebo opatření před uzavřením smlouvy:</strong> Zpracování je nezbytné pro vyřízení Vaší poptávky a následné provedení kontroly systému vytápění.</li>
+                        <li><strong>Plnění právní povinnosti:</strong> Zejména v oblasti účetnictví a daní.</li>
+                        <li><strong>Oprávněný zájem:</strong> Pro účely ochrany našich práv (např. v případě sporů).</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-on-surface mb-4">4. Doba uchovávání údajů</h2>
+                    <p>
+                        Osobní údaje uchováváme pouze po nezbytně nutnou dobu:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Po dobu trvání smluvního vztahu a následně po dobu promlčecích lhůt (zpravidla 3–10 let).</li>
+                        <li>Účetní doklady uchováváme po dobu 10 let dle zákona o DPH.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-on-surface mb-4">5. Vaše práva</h2>
+                    <p>V souvislosti s ochranou osobních údajů máte právo:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Na přístup k Vašim osobním údajům.</li>
+                        <li>Na opravu nebo doplnění údajů.</li>
+                        <li>Na výmaz (právo být zapomenut), pokud pominul účel zpracování.</li>
+                        <li>Na omezení zpracování.</li>
+                        <li>Na přenositelnost údajů.</li>
+                        <li>Vznést námitku proti zpracování.</li>
+                        <li>Podat stížnost u Úřadu pro ochranu osobních údajů (www.uoou.cz).</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-on-surface mb-4">6. Zabezpečení dat</h2>
+                    <p>
+                        Vaše osobní údaje jsou u nás v bezpečí. Přijali jsme technická a organizační opatření, abychom zabránili neoprávněnému přístupu k Vašim údajům nebo jejich zneužití. Přístup k datům mají pouze pověřené osoby správce.
+                    </p>
+                </section>
+
+                <div class="pt-8 text-sm italic">
+                    Tyto zásady jsou platné od 1. 1. 2024.
+                </div>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>
