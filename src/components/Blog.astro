@@ -16,7 +16,8 @@ const articles = [
     title: "Pokuty za neprovedení kontroly: Hrozí až 200 000 Kč",
     description: "SEI zpřísňuje kontroly. Zjistěte, jaké sankce hrozí vlastníkům budov a SVJ při nedodržení termínů.",
     link: "#legislation",
-    icon: "warning"
+    icon: "priority_high",
+    isAlert: true
   },
   {
     title: "Průvodce: Jak probíhá kontrola systému vytápění v praxi",
@@ -46,9 +47,9 @@ const articles = [
 
         <div class="flex flex-wrap gap-8 justify-center">
             {articles.map((article) => (
-                <div class="bg-surface p-8 rounded-3xl border border-outline-variant hover:shadow-xl transition-all group flex flex-col items-center text-center w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]">
-                    <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-2xl">{article.icon}</span>
+                <div class={`bg-surface p-8 rounded-3xl border ${article.isAlert ? 'border-error/30 shadow-sm' : 'border-outline-variant'} hover:shadow-xl transition-all group flex flex-col items-center text-center w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]`}>
+                    <div class={`w-12 h-12 rounded-2xl ${article.isAlert ? 'bg-error/10 text-error' : 'bg-primary/10 text-primary'} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                        <span class="material-symbols-outlined text-2xl font-black">{article.icon}</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-on-surface leading-tight">
                         {article.title}
@@ -56,7 +57,7 @@ const articles = [
                     <p class="text-on-surface-variant mb-6 leading-relaxed">
                         {article.description}
                     </p>
-                    <a href={article.link} class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                    <a href={article.link} class={`inline-flex items-center gap-2 ${article.isAlert ? 'text-error' : 'text-primary'} font-bold hover:gap-3 transition-all`}>
                         Přečíst článek <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
