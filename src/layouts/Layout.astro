@@ -4,9 +4,10 @@ import "../styles/main.scss";
 interface Props {
 	title: string;
     description?: string;
+    structuredData?: object;
 }
 
-const { title, description = "Kontrola Systému Vytápění" } = Astro.props;
+const { title, description = "Kontrola Systému Vytápění", structuredData } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,6 +19,9 @@ const { title, description = "Kontrola Systému Vytápění" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
 		<title>{title}</title>
+        {structuredData && (
+            <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+        )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
