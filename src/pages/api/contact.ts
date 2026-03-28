@@ -85,7 +85,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'noreply@kontrola-systemu-vytapeni.cz',
+        from: 'noreply@mg.kontrola-systemu-vytapeni.cz',
         to: 'info@kontrola-systemu-vytapeni.cz',
         reply_to: emailStr,
         subject: `Poptávka kontroly: ${name} - ${location}`,
