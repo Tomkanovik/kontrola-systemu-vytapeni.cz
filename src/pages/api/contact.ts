@@ -63,7 +63,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   }
 
   const emailBody = `
-    Nová poptávka z webu kontrola-systemu-vytapeni.cz
+    Nová poptávka na kontrolu systému vytápění
 
     Jméno: ${name}
     E-mail: ${email}
@@ -72,9 +72,6 @@ export const POST: APIRoute = async ({ request, locals }) => {
     Typ objektu: ${objectType}
     Příkon: ${power} kW
     Lokalita: ${location}
-
-    ---
-    Tato zpráva byla odeslána z kontaktního formuláře na webu.
   `;
 
   try {
@@ -85,7 +82,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'noreply@mg.kontrola-systemu-vytapeni.cz',
+        from: 'Nová poptávka <noreply@mg.kontrola-systemu-vytapeni.cz>',
         to: 'info@kontrola-systemu-vytapeni.cz',
         reply_to: emailStr,
         subject: `Poptávka kontroly: ${name} - ${location}`,

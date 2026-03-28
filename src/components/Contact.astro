@@ -13,7 +13,7 @@
                     </div>
                     <div>
                         <p class="text-sm text-slate-500 font-bold uppercase tracking-wider">Energetický specialista</p>
-                        <a href="https://prukaz.info/kontakty/petr-novak/" class="text-xl font-bold hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Ing. Petr Novák</a>
+                        <a href="https://www.prukaz.info/" class="text-xl font-bold text-error hover:opacity-80 transition-opacity" target="_blank" rel="noopener noreferrer">Ing. Petr Novák</a>
                     </div>
                 </div>
                 <div class="flex gap-6">
@@ -58,7 +58,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold mb-2" for="power">Příkon (kW) *</label>
-                        <input id="power" name="power" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="např. 150" type="number" min="70" required/>
+                        <input id="power" name="power" class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="např. 150" type="number" required/>
                     </div>
                     <div>
                         <label class="block text-sm font-bold mb-2" for="location">Lokalita *</label>
@@ -92,7 +92,7 @@
                 </div>
                 <h3 class="text-2xl font-bold">Poptávka byla odeslána!</h3>
                 <p class="text-on-surface-variant">Děkujeme za váš zájem. Ozveme se vám do 24 hodin s konkrétním návrhem termínu.</p>
-                <button onclick="document.getElementById('success-message').classList.add('hidden'); document.getElementById('contact-form').classList.remove('hidden');" class="text-primary font-bold hover:underline">Odeslat další poptávku</button>
+                <button onclick="document.getElementById('success-message').classList.add('hidden'); const form = document.getElementById('contact-form'); form.style.opacity = '1'; form.style.pointerEvents = 'auto';" class="text-primary font-bold hover:underline">Odeslat další poptávku</button>
             </div>
         </div>
     </div>
