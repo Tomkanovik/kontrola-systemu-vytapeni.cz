@@ -27,10 +27,13 @@ if (form) {
 
             if (response.ok) {
                 form.reset();
-                form.classList.add('hidden');
-                successMessage?.classList.remove('hidden');
-                // Scroll to the message
-                successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                form.style.opacity = '0';
+                form.style.pointerEvents = 'none';
+                if (successMessage) {
+                    successMessage.classList.remove('hidden');
+                    // Scroll to the message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             } else {
                 if (formError) {
                     formError.textContent = result.message || 'Při odesílání došlo k chybě. Zkuste to prosím znovu.';
