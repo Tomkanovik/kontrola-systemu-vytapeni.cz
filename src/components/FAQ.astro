@@ -2,15 +2,15 @@
 const faqs = [
     {
         question: "Je kontrola opravdu povinná?",
-        answer: "Ano, zákonná povinnost vyplývá přímo ze <strong>zákona č. 406/2000 Sb.</strong> o hospodaření energií, který ukládá vlastníkům budov s instalovaným jmenovitým výkonem nad 70 kW zajistit pravidelnou kontrolu. Podrobnosti o formě a technických parametrech této kontroly pak stanovuje prováděcí <strong>vyhláška č. 38/2022 Sb.</strong>"
+        answer: "Ano, zákonná povinnost vyplývá přímo ze <strong>zákona č.&nbsp;406/2000&nbsp;Sb.</strong> o hospodaření energií, který ukládá vlastníkům budov s instalovaným jmenovitým výkonem nad 70&nbsp;kW zajistit pravidelnou kontrolu. Podrobnosti o formě a technických parametrech této kontroly pak stanovuje prováděcí <strong>vyhláška č.&nbsp;38/2022&nbsp;Sb.</strong>"
     },
     {
         question: "Jaké jsou důsledky chybějící kontroly?",
-        answer: "Nepředložení platného protokolu při inspekci prováděné Státní energetickou inspekcí (SEI) je posuzováno jako porušení zákonné povinnosti, za které může být právnické osobě uložena pokuta až <strong>200 000 Kč</strong>. Absence odborné kontroly může být rovněž problematická při řešení pojistných událostí v kotelně."
+        answer: "Nepředložení platného protokolu při inspekci prováděné Státní energetickou inspekcí (SEI) je posuzováno jako porušení zákonné povinnosti, za které může být právnické osobě uložena pokuta až <strong>200&nbsp;000&nbsp;Kč</strong>. Absence odborné kontroly může být rovněž problematická při řešení pojistných událostí v kotelně."
     },
     {
         question: "Jak dlouho platí výsledek kontroly?",
-        answer: "Platnost protokolu o kontrole systému vytápění je standardně <strong>5 let</strong>. U nově instalovaných systémů musí být první kontrola provedena nejpozději do 3 let od uvedení do provozu."
+        answer: "Platnost protokolu o kontrole systému vytápění je standardně <strong>5&nbsp;let</strong>. U nově instalovaných systémů musí být první kontrola provedena nejpozději do 3&nbsp;let od uvedení do provozu."
     },
     {
         question: "Kdo může tuto kontrolu legálně provádět?",
@@ -18,11 +18,11 @@ const faqs = [
     },
     {
         question: "Týká se kontrola i rodinných domů?",
-        answer: "Většinou ne. Limit 70 kW je nastaven tak, aby běžné rodinné domy (které mají obvykle kotel s výkonem 15-30 kW) do této povinnosti nespadaly. Výjimkou jsou velmi rozlehlé rezidence s více zdroji tepla."
+        answer: "Většinou ne. Limit 70&nbsp;kW je nastaven tak, aby běžné rodinné domy (které mají obvykle kotel s výkonem 15–30&nbsp;kW) do této povinnosti nespadaly. Výjimkou jsou velmi rozlehlé rezidence s více zdroji tepla."
     },
     {
         question: "Platí povinnost i pro tepelná čerpadla?",
-        answer: "Ano, vyhláška se vztahuje na všechny systémy vytápění bez ohledu na palivo, pokud přesahují výkon 70 kW. Týká se tedy i tepelných čerpadel, elektrokotlů i výměníkových stanic."
+        answer: "Ano, vyhláška se vztahuje na všechny systémy vytápění bez ohledu na palivo, pokud přesahují výkon 70&nbsp;kW. Týká se tedy i tepelných čerpadel, elektrokotlů i výměníkových stanic."
     },
     {
         question: "Působíte i v menších městech?",
@@ -38,7 +38,7 @@ const faqSchema = {
         "name": faq.question,
         "acceptedAnswer": {
             "@type": "Answer",
-            "text": faq.answer.replace(/<\/?[^>]+(>|$)/g, "")
+            "text": faq.answer.replace(/<\/?[^>]+(>|$)/g, "").replace(/&nbsp;/g, " ")
         }
     }))
 };
