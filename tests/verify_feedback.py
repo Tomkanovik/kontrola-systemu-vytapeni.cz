@@ -15,6 +15,7 @@ def test_homepage_content(page: Page):
 
     hero_p = page.locator("section >> p").first
     expect(hero_p).to_contain_text("Ing. Petra Nováka")
+    expect(hero_p).to_contain_text("IČO 48873314")
     expect(hero_p).to_contain_text("20 %")
 
     # Check About section
@@ -28,6 +29,8 @@ def test_homepage_content(page: Page):
     # Check Pricing section
     pricing_section = page.locator("#pricing")
     expect(pricing_section).to_contain_text("Kolik stojí odborná kontrola")
+    expect(pricing_section).to_contain_text("Ing. Petr Novák")
+    expect(pricing_section).to_contain_text("IČO 48873314")
     expect(pricing_section).to_contain_text("úspor až 20 %")
 
     # Full page screenshot
